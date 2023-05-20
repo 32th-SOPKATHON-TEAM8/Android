@@ -51,16 +51,16 @@
     </tr>
     <tr align="center">
         <td>
-            (역할) <br/>
+            고발하기 뷰 / API : POST  <br/>
       </td>
        <td>
-            (역할) <br/>
+           고발 상황 알림 및 방 입장하기 / API : GET <br/>
       </td>
        <td>
-            (역할) <br/>
+            메인엑티비티 및 애니메이션(진실의방) 뷰 / API : GET <br/>
       </td>
        <td>
-            (역할) <br/>
+            랭킹 뷰 / API : GET <br/>
       </td>
     </tr>
 </table>
