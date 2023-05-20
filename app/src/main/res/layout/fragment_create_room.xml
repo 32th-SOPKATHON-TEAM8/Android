@@ -50,7 +50,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:text="@={vm._code}"
+
             android:hint="받은 초대 코드를 입력해주세요"
             android:layout_marginHorizontal="16dp"
             app:layout_constraintTop_toBottomOf="@id/tv_code"
@@ -75,7 +75,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:text="@={vm._nickname}"
             android:hint="10자 이내의 닉네임을 입력해주세요"
             android:layout_marginHorizontal="16dp"
             app:layout_constraintTop_toBottomOf="@id/tv_nickname"
