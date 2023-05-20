@@ -2,7 +2,7 @@ package com.example.sopthactaton.presentation.home
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.sopthactaton.api.repo.TestRepo
+import com.example.sopthactaton.data.repoImpl.TestRepo
 import kotlinx.coroutines.launch
 
 class TestViewModel(

@@ -2,11 +2,14 @@ package com.example.sopthactaton.util
 
 import android.app.Activity
 import android.content.Context
+import android.content.pm.PackageManager
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 
 
 //ex) toast("회원가입 실패", Toast.LENGTH_SHORT)
+
 fun Activity.toast(
     message: String,
     length: Int = Toast.LENGTH_SHORT,
