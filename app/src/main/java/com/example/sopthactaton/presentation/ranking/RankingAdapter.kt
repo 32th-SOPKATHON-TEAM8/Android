@@ -7,15 +7,15 @@ import android.widget.AdapterView
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
-import com.example.sopthactaton.api.model.ResponseRankingDto
 import com.example.sopthactaton.databinding.ItemNoRankBinding
 import com.example.sopthactaton.databinding.ItemYesRank4Binding
 import com.example.sopthactaton.databinding.ItemYesRank5Binding
+import com.example.sopthactaton.model.ResponseUsersRankingDto
 import com.example.sopthactaton.util.DiffCallback
 
 
 class RankingAdapter:
-    ListAdapter<ResponseRankingDto.Data, ViewHolder>(rankingDiffUtil) {
+    ListAdapter<ResponseUsersRankingDto.Data.User, ViewHolder>(rankingDiffUtil) {
 
     private var listener: OnItemClickListener? = null
 
@@ -77,7 +77,7 @@ class RankingAdapter:
 
     inner class YesRank5ViewHolder(private val binding: ItemYesRank5Binding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun onBind(item: ResponseRankingDto.Data) {
+        fun onBind(item: ResponseUsersRankingDto.Data.User) {
 
             if (absoluteAdapterPosition != RecyclerView.NO_POSITION) {
                 binding.ibAccuse.setOnClickListener {
@@ -90,7 +90,7 @@ class RankingAdapter:
 
     inner class YesRank4ViewHolder(private val binding: ItemYesRank4Binding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun onBind(item: ResponseRankingDto.Data) {
+        fun onBind(item: ResponseUsersRankingDto.Data.User) {
 
             if (absoluteAdapterPosition != RecyclerView.NO_POSITION) {
                 binding.ibAccuse.setOnClickListener {
@@ -102,7 +102,7 @@ class RankingAdapter:
     }
 
     interface OnItemClickListener {
-        fun onItemClick(v: View, data: ResponseRankingDto.Data, pos: Int)
+        fun onItemClick(v: View, data: ResponseUsersRankingDto.Data.User, pos: Int)
     }
 
     fun setOnItemClickListener(listener: OnItemClickListener) {
@@ -112,7 +112,7 @@ class RankingAdapter:
 
     companion object {
         private val rankingDiffUtil =
-            DiffCallback<ResponseRankingDto.Data>(id = { old, new -> old.id == new.id })
+            DiffCallback<ResponseUsersRankingDto.Data.User>(id = { old, new -> old.id == new.id })
     }
 
 

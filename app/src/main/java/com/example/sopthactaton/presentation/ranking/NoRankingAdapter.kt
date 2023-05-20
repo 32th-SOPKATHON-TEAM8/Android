@@ -5,14 +5,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.sopthactaton.api.model.ResponseRankingDto
 import com.example.sopthactaton.databinding.ItemNoRankBinding
 import com.example.sopthactaton.databinding.ItemYesRank4Binding
 import com.example.sopthactaton.databinding.ItemYesRank5Binding
+import com.example.sopthactaton.model.ResponseUsersRankingDto
 import com.example.sopthactaton.util.DiffCallback
 
 class NoRankingAdapter:
-    ListAdapter<ResponseRankingDto.Data, NoRankingAdapter.RankViewHolder>(rankingDiffUtil) {
+    ListAdapter<ResponseUsersRankingDto.Data.User, NoRankingAdapter.RankViewHolder>(rankingDiffUtil) {
 
     private var listener: OnItemClickListener? = null
 
@@ -32,7 +32,7 @@ class NoRankingAdapter:
 
     inner class RankViewHolder(private val binding: ItemNoRankBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun onBind(item: ResponseRankingDto.Data) {
+        fun onBind(item: ResponseUsersRankingDto.Data.User) {
 
             if (absoluteAdapterPosition != RecyclerView.NO_POSITION) {
                 binding.ibAccuse.setOnClickListener {
@@ -46,7 +46,7 @@ class NoRankingAdapter:
 
 
     interface OnItemClickListener {
-        fun onItemClick(v: View, data: ResponseRankingDto.Data, pos: Int)
+        fun onItemClick(v: View, data: ResponseUsersRankingDto.Data.User, pos: Int)
     }
 
     fun setOnItemClickListener(listener: OnItemClickListener) {
@@ -56,7 +56,7 @@ class NoRankingAdapter:
 
     companion object {
         private val rankingDiffUtil =
-            DiffCallback<ResponseRankingDto.Data>(id = { old, new -> old.id == new.id })
+            DiffCallback<ResponseUsersRankingDto.Data.User>(id = { old, new -> old.id == new.id })
     }
 
 
