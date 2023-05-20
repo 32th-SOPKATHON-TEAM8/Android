@@ -1,7 +1,6 @@
 package com.example.sopthactaton.api
 
 import android.util.Log
-import com.example.sopthactaton.BuildConfig.SOPT_BASE_URL
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import kotlinx.serialization.json.Json
 import okhttp3.Interceptor
@@ -57,4 +56,5 @@ object ApiFactory {
 
 object ServicePool {
     val testService = ApiFactory.createAuthService<TestApiService>()
+    val accuseService = ApiFactory.createAuthService<AccuseApiService>()
 }

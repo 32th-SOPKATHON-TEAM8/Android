@@ -8,7 +8,9 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:paddingHorizontal="16dp">
+
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/ab_test"
             android:layout_width="match_parent"
@@ -22,10 +24,11 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                     android:layout_width="wrap_content"
+                    android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:gravity="center"
-                    android:text="test"
+                    android:text="김예림 님 고발하기"
+                    android:textAppearance="@style/TextAppearance.title03"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -38,79 +41,199 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_scrollFlags="scroll|enterAlways"
-                    app:navigationIcon="@drawable/ic_launcher_background" />
+                    app:navigationIcon="@drawable/ic_back" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </com.google.android.material.appbar.AppBarLayout>
+
+        <TextView
+            android:id="@+id/tv_category_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="카테고리 선택"
+            android:textAppearance="@style/TextAppearance.title03"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ab_test" />
+
         <com.google.android.material.chip.ChipGroup
             android:id="@+id/chipGroup"
-            app:chipSpacingHorizontal="20dp"
-            app:singleSelection="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ab_test"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            app:layout_constraintTop_toBottomOf="@id/tv_category_title"
+            app:singleSelection="true">
 
             <com.google.android.material.chip.Chip
-                style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:id="@+id/chip01"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:chipStartPadding="20dp"
-                app:chipEndPadding="20dp"
-                app:chipBackgroundColor="@color/black"
-                android:textSize="18sp"
-                android:textColor="@color/white"
-                android:text="Chip 1" />
+                android:layout_height="36dp"
+                android:text="Chip 2"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                app:chipBackgroundColor="@color/white"
+                app:chipEndPadding="10dp"
+                app:chipStartPadding="10dp"
+                app:chipStrokeColor="@color/gray_100"
+                app:chipStrokeWidth="1dp"  />
 
             <com.google.android.material.chip.Chip
-                style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:id="@+id/chip02"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:chipStartPadding="20dp"
-                app:chipEndPadding="20dp"
-                app:chipStrokeColor="@color/black"
-                app:chipStrokeWidth="2dp"
-                app:chipBackgroundColor="@color/black"
-                android:textSize="18sp"
-                android:textColor="@color/white"
-                android:text="Chip 2" />
+                android:layout_height="36dp"
+                android:text="Chip 2"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                app:chipBackgroundColor="@color/white"
+                app:chipEndPadding="10dp"
+                app:chipStartPadding="10dp"
+                app:chipStrokeColor="@color/gray_100"
+                app:chipStrokeWidth="1dp" />
 
             <com.google.android.material.chip.Chip
-                style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:id="@+id/chip03"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:chipStartPadding="20dp"
-                app:chipEndPadding="20dp"
-                app:chipBackgroundColor="@color/black"
-                android:textSize="18sp"
-                android:textColor="@color/white"
-                android:text="Chip 3" />
+                android:layout_height="36dp"
+                android:text="Chip 2"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                app:chipBackgroundColor="@color/white"
+                app:chipEndPadding="10dp"
+                app:chipStartPadding="10dp"
+                app:chipStrokeColor="@color/gray_100"
+                app:chipStrokeWidth="1dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip04"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="Chip 2"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                app:chipBackgroundColor="@color/white"
+                app:chipEndPadding="10dp"
+                app:chipStartPadding="10dp"
+                app:chipStrokeColor="@color/gray_100"
+                app:chipStrokeWidth="1dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip05"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="Chip 2"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                app:chipBackgroundColor="@color/white"
+                app:chipEndPadding="10dp"
+                app:chipStartPadding="10dp"
+                app:chipStrokeColor="@color/gray_100"
+                app:chipStrokeWidth="1dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip06"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="Chip 2"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                app:chipBackgroundColor="@color/white"
+                app:chipEndPadding="10dp"
+                app:chipStartPadding="10dp"
+                app:chipStrokeColor="@color/gray_100"
+                app:chipStrokeWidth="1dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip07"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="Chip 2"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                app:chipBackgroundColor="@color/white"
+                app:chipEndPadding="10dp"
+                app:chipStartPadding="10dp"
+                app:chipStrokeColor="@color/gray_100"
+                app:chipStrokeWidth="1dp" />
+
 
         </com.google.android.material.chip.ChipGroup>
 
+        <TextView
+            android:id="@+id/tv_picture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="포착한 사진 첨부"
+            android:textAppearance="@style/TextAppearance.title03"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/chipGroup" />
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:id="@+id/iv_test"
+            android:layout_width="match_parent"
+            android:layout_height="214dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_picture" />
+
+        <ImageView
+            android:background="@drawable/background_radius2"
+            android:scaleType="fitXY"
+            android:id="@+id/iv_test2"
+            android:padding="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="214dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/group_37021"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_picture" />
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="고발 내용 입력"
+            android:layout_marginTop="32dp"
+            android:textAppearance="@style/TextAppearance.title03"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_test" />
+
         <EditText
-            android:hint="test"
             android:id="@+id/etv_search"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:maxLength="50"
-            android:gravity="center"
+            android:background="@drawable/background_radius2"
+            android:fontFamily="@font/pretendard_semibold"
+            android:gravity="top"
+            android:hint="(최대 50자)"
             android:imeOptions="actionDone"
-            android:inputType="textMultiLine"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:background="@null"
-            app:layout_constraintEnd_toEndOf="parent"/>
-        <ImageView
-            android:id="@+id/iv_test"
-            android:layout_width="match_parent"
-            android:layout_height="450dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:maxLength="50"
+            app:layout_constraintBottom_toTopOf="@+id/btn_accuse"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@id/tv_content" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_accuse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:background="@drawable/background_radiuse"
+            android:textAppearance="@style/TextAppearance.title03"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="11dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="고발하기"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
