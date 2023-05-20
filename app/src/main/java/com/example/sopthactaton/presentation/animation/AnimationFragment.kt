@@ -19,7 +19,7 @@ import com.example.sopthactaton.util.ViewModelFactory
 import kotlinx.coroutines.launch
 
 class AnimationFragment : Fragment() {
-    private val viewModel: NoticeViewModel by viewModels { ViewModelFactory(requireContext()) }
+//    private val viewModel: NoticeViewModel by viewModels { ViewModelFactory(requireContext()) }
     private var _binding: FragmentAnimationBinding? = null
     private val binding get() = _binding!!
 
@@ -67,12 +67,10 @@ class AnimationFragment : Fragment() {
     }
 
     fun getUsersRanking() {
-        viewModel.getUsersContent()
+//        viewModel.getUsersContent()
     }
 
     fun isGotAccusement() {
-        // 조건문으로 진실의방 해당자 판별되면 다이얼로그
-
         getUsersRanking()
         val gotAccusementDialog = GotAccusementDialog()
         gotAccusementDialog.show(parentFragmentManager, "show")
