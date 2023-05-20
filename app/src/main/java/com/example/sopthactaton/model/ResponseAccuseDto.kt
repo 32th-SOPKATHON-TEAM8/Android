@@ -8,6 +8,6 @@ import kotlinx.serialization.Serializable
 data class ResponseAccuseDto(
     @SerialName("message")
     val message: String,
-    @SerialName("status")
-    val status: Int
+    @SerialName("code")
+    val code: Int
 )
