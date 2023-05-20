@@ -56,6 +56,7 @@ class AccuseActivity : AppCompatActivity() {
                 R.id.chip01 -> {
                     binding.chip01.setChipBackgroundColorResource(R.color.colorPrimary)
                     binding.chip01.setTypeface(null, Typeface.BOLD)
+                    binding.chip01.setTextColor(ContextCompat.getColor(this, R.color.black))
                     binding.chip02.setChipBackgroundColorResource(R.color.gray_200)
                     binding.chip02.setTextColor(ContextCompat.getColor(this, R.color.gray_400))
                     binding.chip03.setChipBackgroundColorResource(R.color.gray_200)
@@ -73,6 +74,7 @@ class AccuseActivity : AppCompatActivity() {
                 R.id.chip02 -> {
                     binding.chip02.setChipBackgroundColorResource(R.color.colorPrimary)
                     binding.chip02.setTypeface(null, Typeface.BOLD)
+                    binding.chip02.setTextColor(ContextCompat.getColor(this, R.color.black))
                     binding.chip01.setChipBackgroundColorResource(R.color.gray_200)
                     binding.chip01.setTextColor(ContextCompat.getColor(this, R.color.gray_400))
                     binding.chip03.setChipBackgroundColorResource(R.color.gray_200)
@@ -89,6 +91,7 @@ class AccuseActivity : AppCompatActivity() {
                 R.id.chip03 -> {
                     binding.chip03.setChipBackgroundColorResource(R.color.colorPrimary)
                     binding.chip03.setTypeface(null, Typeface.BOLD)
+                    binding.chip03.setTextColor(ContextCompat.getColor(this, R.color.black))
                     binding.chip02.setChipBackgroundColorResource(R.color.gray_200)
                     binding.chip02.setTextColor(ContextCompat.getColor(this, R.color.gray_400))
                     binding.chip01.setChipBackgroundColorResource(R.color.gray_200)
@@ -105,6 +108,7 @@ class AccuseActivity : AppCompatActivity() {
                 R.id.chip04 -> {
                     binding.chip04.setChipBackgroundColorResource(R.color.colorPrimary)
                     binding.chip04.setTypeface(null, Typeface.BOLD)
+                    binding.chip04.setTextColor(ContextCompat.getColor(this, R.color.black))
                     binding.chip02.setChipBackgroundColorResource(R.color.gray_200)
                     binding.chip02.setTextColor(ContextCompat.getColor(this, R.color.gray_400))
                     binding.chip03.setChipBackgroundColorResource(R.color.gray_200)
@@ -121,6 +125,7 @@ class AccuseActivity : AppCompatActivity() {
                 R.id.chip05 -> {
                     binding.chip05.setChipBackgroundColorResource(R.color.colorPrimary)
                     binding.chip05.setTypeface(null, Typeface.BOLD)
+                    binding.chip05.setTextColor(ContextCompat.getColor(this, R.color.black))
                     binding.chip02.setChipBackgroundColorResource(R.color.gray_200)
                     binding.chip02.setTextColor(ContextCompat.getColor(this, R.color.gray_400))
                     binding.chip03.setChipBackgroundColorResource(R.color.gray_200)
@@ -137,6 +142,7 @@ class AccuseActivity : AppCompatActivity() {
                 R.id.chip06 -> {
                     binding.chip06.setChipBackgroundColorResource(R.color.colorPrimary)
                     binding.chip06.setTypeface(null, Typeface.BOLD)
+                    binding.chip06.setTextColor(ContextCompat.getColor(this, R.color.black))
                     binding.chip02.setChipBackgroundColorResource(R.color.gray_200)
                     binding.chip02.setTextColor(ContextCompat.getColor(this, R.color.gray_400))
                     binding.chip03.setChipBackgroundColorResource(R.color.gray_200)
@@ -153,6 +159,7 @@ class AccuseActivity : AppCompatActivity() {
                 R.id.chip07 -> {
                     binding.chip07.setChipBackgroundColorResource(R.color.colorPrimary)
                     binding.chip07.setTypeface(null, Typeface.BOLD)
+                    binding.chip07.setTextColor(ContextCompat.getColor(this, R.color.black))
                     binding.chip02.setChipBackgroundColorResource(R.color.gray_200)
                     binding.chip02.setTextColor(ContextCompat.getColor(this, R.color.gray_400))
                     binding.chip03.setChipBackgroundColorResource(R.color.gray_200)
