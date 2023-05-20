@@ -1,7 +1,6 @@
-package com.example.sopthactaton.presentation.home
+package com.example.sopthactaton.presentation.animation
 
 import android.util.Log
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -10,19 +9,26 @@ import com.example.sopthactaton.domain.TestDataSource
 import com.example.sopthactaton.model.ResponseUsersRankingDto
 import kotlinx.coroutines.launch
 
-class TestViewModel(
+class NoticeViewModel(
     val testRepo: TestRepo
 ) : ViewModel(){
-    private val _test = MutableLiveData<ResponseUsersRankingDto.Data>()
-    val test: LiveData<ResponseUsersRankingDto.Data>
-        get() = _test
+    private var _hostLiveData = MutableLiveData<List<ResponseUsersRankingDto.Data.User>>()
+    val hostLiveData: List<ResponseUsersRankingDto.Data.User>?
+        get() = _hostLiveData.value
+
+
 
     fun getUsersContent(){
         viewModelScope.launch {
             val response = testRepo.getUsersRanking()
             if (response.isSuccessful) {
-                _test.value= response.body()?.data
+                var userList = response.body()?.data?.user!!
+                _hostLiveData.value = findHostUsers(userList)
             }
         }
+    }
+
+    fun findHostUsers(users: List<ResponseUsersRankingDto.Data.User>): List<ResponseUsersRankingDto.Data.User> {
+        return users.filter { it.isHost }
     }
 }
