@@ -4,8 +4,8 @@ import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.sopthactaton.api.ServicePool
-import com.example.sopthactaton.api.repo.TestRepo
-import com.example.sopthactaton.api.repo.TestRepoRemoteDataSource
+import com.example.sopthactaton.data.repoImpl.TestRepo
+import com.example.sopthactaton.data.datasource.TestRepoRemoteDataSource
 import com.example.sopthactaton.presentation.home.TestViewModel
 
 
