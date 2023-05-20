@@ -1,6 +1,7 @@
 package com.example.sopthactaton.api
 
 import android.util.Log
+import com.example.sopthactaton.BuildConfig
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import kotlinx.serialization.json.Json
 import okhttp3.Interceptor
@@ -38,7 +39,7 @@ object ApiFactory {
         .build()
 
     val testAPI: Retrofit by lazy {
-        Retrofit.Builder().baseUrl("test")
+        Retrofit.Builder().baseUrl(BuildConfig.SOPT_BASE_URL)
             .addConverterFactory(Json.asConverterFactory("application/json".toMediaType()))
             .client(client).build()
     }
@@ -49,4 +50,5 @@ object ApiFactory {
 
 object ServicePool {
     val testService = ApiFactory.createAuthService<TestApiService>()
+    val accuseService = ApiFactory.createAuthService<AccuseApiService>()
 }

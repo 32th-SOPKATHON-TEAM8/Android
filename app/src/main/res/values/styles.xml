@@ -17,4 +17,10 @@
         <item name="android:fontFamily">@font/pretendard_bold</item>
         <item name="android:textSize">24sp</item>
     </style>
+
+    <style name="TextAppearance.title03" parent="">
+        <item name="fontWeight">700</item>
+        <item name="android:fontFamily">@font/pretendard_bold</item>
+        <item name="android:textSize">17sp</item>
+    </style>
 </resources>
