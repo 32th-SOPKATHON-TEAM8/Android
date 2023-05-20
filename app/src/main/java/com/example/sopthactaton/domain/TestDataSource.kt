@@ -1,4 +1,4 @@
-package com.example.sopthactaton.api.repo
+package com.example.sopthactaton.domain
 
 import retrofit2.Response
 /**
