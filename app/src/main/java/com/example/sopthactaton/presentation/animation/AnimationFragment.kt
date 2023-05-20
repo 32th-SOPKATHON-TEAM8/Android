@@ -36,8 +36,6 @@ class AnimationFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         isGotAccusement()
-    }
-
 
         val imageView = ImageView(requireContext())
         imageView.setImageResource(R.drawable.room_image)
@@ -66,20 +64,21 @@ class AnimationFragment : Fragment() {
 
         animator.start()
 
-
     }
 
-    fun getUsersRanking(){
+    fun getUsersRanking() {
         viewModel.getUsersContent()
     }
-    fun isGotAccusement(){
+
+    fun isGotAccusement() {
         // 조건문으로 진실의방 해당자 판별되면 다이얼로그
 
         getUsersRanking()
         val gotAccusementDialog = GotAccusementDialog()
-        gotAccusementDialog.show(parentFragmentManager,"show")
+        gotAccusementDialog.show(parentFragmentManager, "show")
     }
 
 
-
 }
+
+

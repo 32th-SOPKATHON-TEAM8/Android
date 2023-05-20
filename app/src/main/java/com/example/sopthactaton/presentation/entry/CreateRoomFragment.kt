@@ -1,5 +1,6 @@
 package com.example.sopthactaton.presentation.entry
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -11,6 +12,8 @@ import com.example.sopthactaton.R
 import com.example.sopthactaton.databinding.FragmentAnimationBinding
 import com.example.sopthactaton.databinding.FragmentCreateRoomBinding
 import com.example.sopthactaton.presentation.animation.NoticeViewModel
+import com.example.sopthactaton.presentation.main.MainActivity
+import com.example.sopthactaton.presentation.ranking.RankingActivity
 import com.example.sopthactaton.util.ViewModelFactory
 
 class CreateRoomFragment : Fragment() {
@@ -31,7 +34,7 @@ class CreateRoomFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.btnEnterRoom.setOnClickListener{
-            // rv로 넘어가는 코드
+            startActivity(Intent(context, RankingActivity::class.java))
         }
     }
 
