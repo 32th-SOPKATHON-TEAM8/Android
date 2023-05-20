@@ -1,16 +1,19 @@
 package com.example.sopthactaton.presentation.animation
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.lifecycleScope
 import com.example.sopthactaton.R
 import com.example.sopthactaton.databinding.FragmentAnimationBinding
 import com.example.sopthactaton.presentation.home.TestViewModel
 import com.example.sopthactaton.util.ViewModelFactory
+import kotlinx.coroutines.launch
 
 class AnimationFragment : Fragment() {
     private val viewModel: NoticeViewModel by viewModels { ViewModelFactory(requireContext()) }
@@ -42,6 +45,7 @@ class AnimationFragment : Fragment() {
     }
     fun isGotAccusement(){
         // 조건문으로 진실의방 해당자 판별되면 다이얼로그
+
         getUsersRanking()
         val gotAccusementDialog = GotAccusementDialog()
         gotAccusementDialog.show(parentFragmentManager,"show")

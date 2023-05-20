@@ -1,6 +1,7 @@
 package com.example.sopthactaton.presentation.animation
 
 import android.util.Log
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.sopthactaton.data.repoImpl.TestRepo
@@ -11,6 +12,10 @@ import kotlinx.coroutines.launch
 class NoticeViewModel(
     val testRepo: TestRepo
 ) : ViewModel(){
+    private var _hostLiveData = MutableLiveData<List<ResponseUsersRankingDto.Data.User>>()
+    val hostLiveData: List<ResponseUsersRankingDto.Data.User>?
+        get() = _hostLiveData.value
+
 
 
     fun getUsersContent(){
@@ -18,13 +23,12 @@ class NoticeViewModel(
             val response = testRepo.getUsersRanking()
             if (response.isSuccessful) {
                 var userList = response.body()?.data?.user!!
-                findHostUser(userList)
+                _hostLiveData.value = findHostUsers(userList)
             }
         }
     }
 
-
-    fun findHostUser(users: List<ResponseUsersRankingDto.Data.User>): ResponseUsersRankingDto.Data.User? {
-        return users.find { it.isHost }
+    fun findHostUsers(users: List<ResponseUsersRankingDto.Data.User>): List<ResponseUsersRankingDto.Data.User> {
+        return users.filter { it.isHost }
     }
 }

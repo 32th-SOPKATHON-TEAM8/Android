@@ -30,6 +30,9 @@ class CreateRoomFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.btnEnterRoom.setOnClickListener{
+            // rv로 넘어가는 코드
+        }
     }
 
     override fun onDestroyView() {
