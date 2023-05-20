@@ -30,7 +30,7 @@
             <a href="">
               <img src="https://github.com/32th-SOPKATHON-TEAM8/Android/assets/93514333/98ea5522-ebd4-4cea-a9bf-b395c1daefd7" width="200" alt="깃허브계정-프로필사진">
               <br />
-              <b> HyeseonBaek </b>
+              <b> sxunea </b>
             </a>
         </td>
       <td style="min-width: 150px;">
