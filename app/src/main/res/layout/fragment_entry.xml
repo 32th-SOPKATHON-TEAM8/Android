@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -8,6 +10,53 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_entry_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="41dp"
+            android:src="@drawable/entry_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_select"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="220dp"
+            android:paddingHorizontal="25dp"
+            android:text="어떤 걸 선택하실?"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/ibn_make_room"
+            android:layout_width="wrap_content"
+            android:layout_height="110dp"
+            android:layout_marginTop="24dp"
+            android:background="@null"
+            android:src="@drawable/btn_entry_make"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_select" />
+
+        <ImageButton
+            android:id="@+id/ibn_in_room"
+            android:layout_width="wrap_content"
+            android:layout_height="110dp"
+            android:layout_marginTop="12dp"
+            android:background="@null"
+            android:src="@drawable/btn_entry_in"
+            app:layout_constraintEnd_toEndOf="@+id/ibn_make_room"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/ibn_make_room"
+            app:layout_constraintTop_toBottomOf="@+id/ibn_make_room" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
