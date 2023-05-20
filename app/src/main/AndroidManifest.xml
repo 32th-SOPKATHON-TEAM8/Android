@@ -12,7 +12,7 @@
         android:theme="@style/Theme.SoptHactaton"
         tools:targetApi="31">
         <activity
-            android:name=".presentation.MainActivity"
+            android:name=".presentation.main.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,6 +21,12 @@
             </intent-filter>
 
         </activity>
+        <activity
+            android:name=".presentation.ranking.RankingActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".presentation.accuse.AccuseActivity"
+            android:exported="false"/>
     </application>
 
 </manifest>
