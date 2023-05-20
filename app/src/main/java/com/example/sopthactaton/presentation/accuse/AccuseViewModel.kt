@@ -8,6 +8,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.sopthactaton.data.repoImpl.AccuseRepoImpl
 import com.example.sopthactaton.data.repoImpl.TestRepo
 import com.example.sopthactaton.model.Category
+import com.example.sopthactaton.model.userId
 import kotlinx.coroutines.launch
 
 class AccuseViewModel  (
@@ -23,4 +24,10 @@ private val accuseRepoImpl: AccuseRepoImpl
         }
     }
 
+    fun accuse(userId1:Int) = viewModelScope.launch {
+        val response = accuseRepoImpl.accuse(userId1)
+        if(response.isSuccessful){
+            Log.d("test","test")
+        }
+    }
 }

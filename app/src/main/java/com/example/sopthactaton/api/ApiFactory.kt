@@ -1,9 +1,7 @@
 package com.example.sopthactaton.api
 
 import android.util.Log
-import androidx.paging.Config
 import com.example.sopthactaton.BuildConfig
-import com.example.sopthactaton.api.repo.AccuseApiService
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import kotlinx.serialization.json.Json
 import okhttp3.Interceptor
