@@ -1,4 +1,4 @@
-package com.example.sopthactaton.api.repo
+package com.example.sopthactaton.api
 
 import com.example.sopthactaton.api.model.ResponseRankingDto
 import retrofit2.Call
