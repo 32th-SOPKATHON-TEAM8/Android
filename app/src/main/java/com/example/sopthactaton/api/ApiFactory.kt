@@ -1,7 +1,7 @@
 package com.example.sopthactaton.api
 
 import android.util.Log
-import com.example.sopthactaton.BuildConfig.SOPT_BASE_URL
+import com.example.sopthactaton.BuildConfig
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import kotlinx.serialization.json.Json
 import okhttp3.Interceptor
@@ -11,13 +11,9 @@ import okhttp3.logging.HttpLoggingInterceptor
 import org.json.JSONArray
 import org.json.JSONObject
 import retrofit2.Retrofit
-import java.util.concurrent.TimeUnit
 
 object ApiFactory {
 
-    val json = Json(){
-        ignoreUnknownKeys = true
-    }
     private fun getLogOkHttpClient(): Interceptor {
 
         val interceptor = HttpLoggingInterceptor { message ->
@@ -40,14 +36,11 @@ object ApiFactory {
 
     private val client = OkHttpClient.Builder()
         .addInterceptor(getLogOkHttpClient())
-        .connectTimeout(100, TimeUnit.SECONDS)
-        .readTimeout(100,TimeUnit.SECONDS)
-        .writeTimeout(100, TimeUnit.SECONDS)
         .build()
 
     val testAPI: Retrofit by lazy {
-        Retrofit.Builder().baseUrl(SOPT_BASE_URL)
-            .addConverterFactory(json.asConverterFactory("application/json".toMediaType()))
+        Retrofit.Builder().baseUrl(BuildConfig.SOPT_BASE_URL)
+            .addConverterFactory(Json.asConverterFactory("application/json".toMediaType()))
             .client(client).build()
     }
 
@@ -57,4 +50,5 @@ object ApiFactory {
 
 object ServicePool {
     val testService = ApiFactory.createAuthService<TestApiService>()
+    val accuseService = ApiFactory.createAuthService<AccuseApiService>()
 }
