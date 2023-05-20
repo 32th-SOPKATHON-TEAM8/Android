@@ -19,6 +19,12 @@
             android:name=".presentation.main.MainActivity"
             android:exported="false" />
         <activity
+            android:name=".presentation.accuse.AccuseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.animation.AnimationActivity"
+            android:exported="false" />
+        <activity
 
             android:name=".SplashActivity"
             android:exported="true">

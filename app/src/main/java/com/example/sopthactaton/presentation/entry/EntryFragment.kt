@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.sopthactaton.R
 import com.example.sopthactaton.databinding.FragmentEntryBinding
+import com.example.sopthactaton.presentation.animation.AnimationFragment
 
 class EntryFragment : Fragment() {
     private var _binding: FragmentEntryBinding? = null
@@ -26,12 +27,23 @@ class EntryFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        toAnimation()
     }
 
     override fun onDestroyView() {
         _binding = null
         super.onDestroyView()
     }
+    fun toAnimation(){
+        binding.ibnInRoom.setOnClickListener {
+            // 두 번째 Fragment로 전환
+            val secondFragment = CreateRoomFragment()
+            val transaction = requireActivity().supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.fragment_container, secondFragment)
+            transaction.addToBackStack(null)
+            transaction.commit()
+        }
 
+    }
 
 }

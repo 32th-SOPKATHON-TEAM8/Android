@@ -27,8 +27,7 @@ class ViewModelFactory(private val context: Context) : ViewModelProvider.Factory
                 AccuseViewModel(repository) as T
             }
             modelClass.isAssignableFrom(RoomViewModel::class.java) -> {
-                val repository = AccuseRepoImpl(AccuseDataSource(ServicePool.accuseService))
-                AccuseViewModel(repository) as T
+                RoomViewModel() as T
             }
             else -> {
                 throw IllegalArgumentException("Failed to create ViewModel : ${modelClass.name}")
